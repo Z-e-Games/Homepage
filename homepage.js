@@ -1,6 +1,12 @@
+
+
 const usernamePlace = document.getElementById('username-show')
 const goldCoinsHtml = document.getElementById('gold')
 const diamonds = document.getElementById('diamond')
+
+if(localStorage.getItem('coins per kill') === null){
+    localStorage.setItem('coins per kill',1)
+}
 
 if(localStorage.getItem('diamonds') === null){
     localStorage.setItem('diamonds',100)

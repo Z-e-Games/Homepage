@@ -1,12 +1,7 @@
-
-
 const usernamePlace = document.getElementById('username-show')
 const goldCoinsHtml = document.getElementById('gold')
-const diamonds = document.getElementById('diamond')
-
-if(localStorage.getItem('coins per kill') === null){
-    localStorage.setItem('coins per kill',1)
-}
+const diamondPlace = document.getElementById('diamond')
+const skinPlace = document.getElementById('skin-show')
 
 if(localStorage.getItem('diamonds') === null){
     localStorage.setItem('diamonds',100)
@@ -14,17 +9,29 @@ if(localStorage.getItem('diamonds') === null){
 if(localStorage.getItem('gold coins') === null){
     localStorage.setItem('gold coins', 100)
 }
+
+if(localStorage.getItem('has elf skin') === null){
+    localStorage.setItem('has elf skin', 'no')
+}
+
 if(localStorage.getItem('hasSquidGameMusic') === null){
     localStorage.setItem('hasSquidGameMusic','no')
 }
 if(localStorage.getItem('is signed in') === 'yes'){
     goldCoinsHtml.innerHTML = `Gold Coins: ${localStorage.getItem('gold coins')}`
+}else{
+    goldCoinsHtml.innerHTML = `Gold Coins: 0`
 }
 if(localStorage.getItem('is signed in') === 'yes'){
-    diamonds.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
+    diamondPlace.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
+}else{
+    diamondPlace.innerHTML = `Diamonds: 0`
 }
-diamonds.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
 
+if(localStorage.getItem('has elf skin') === 'yes'){
+    skinPlace.innerHTML = `Skin: ELF`
+}
+ 
 function logout(){
     localStorage.setItem('is signed in','no')
     location.reload()

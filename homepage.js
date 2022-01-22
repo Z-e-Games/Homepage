@@ -23,7 +23,7 @@ if(localStorage.getItem('is signed in') === 'yes'){
     goldCoinsHtml.innerHTML = `Gold Coins: ${localStorage.getItem('gold coins')}`  
     diamondPlace.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
     usernamePlace.innerHTML = localStorage.getItem('username')
-    xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/20000`
+    xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/3500`
     levelPlace.innerHTML = `Level: ${localStorage.getItem('Level')}`
 }else{
     goldCoinsHtml.innerHTML = `Gold Coins: 0`
@@ -50,8 +50,8 @@ if(localStorage.getItem('XP') === null){
     localStorage.setItem('XP', 0)
 }
 
-if(localStorage.getItem('XP') >= 2000){
-    localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 2000)
+if(localStorage.getItem('XP') >= 3500){
+    localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 3500)
     localStorage.setItem('Level',parseInt(localStorage.getItem('Level')) + 1)
     localStorage.setItem('gold coins', parseInt(localStorage.getItem('gold coins')) + 8500)
     localStorage.setItem('has elf skin', 'yes')

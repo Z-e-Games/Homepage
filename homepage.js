@@ -13,8 +13,8 @@ if(localStorage.getItem('pulse ammo') === null){
 if(localStorage.getItem('diamonds') === null){
     localStorage.setItem('diamonds',100)
 }
-if(localStorage.getItem('tech coins') === null){
-    localStorage.setItem('tech coins', 100)
+if(localStorage.getItem('gold coins') === null){
+    localStorage.setItem('gold coins', 100)
 }
 
 if(localStorage.getItem('has season skin') === null){
@@ -25,7 +25,7 @@ if(localStorage.getItem('hasSquidGameMusic') === null){
     localStorage.setItem('hasSquidGameMusic','no')
 }
 if(localStorage.getItem('is signed in') === 'yes'){
-    goldCoinsHtml.innerHTML = `Gold Coins: ${localStorage.getItem('tech coins')}`  
+    goldCoinsHtml.innerHTML = `Gold Coins: ${localStorage.getItem('gold coins')}`  
     diamondPlace.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
     usernamePlace.innerHTML = localStorage.getItem('username')
     xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/20000`
@@ -58,7 +58,7 @@ if(localStorage.getItem('XP') === null){
 if(localStorage.getItem('XP') >= 2000){
     localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 2000)
     localStorage.setItem('Level',parseInt(localStorage.getItem('Level')) + 1)
-    localStorage.setItem('tech coins', parseInt(localStorage.getItem('tech coins')) + 8500)
+    localStorage.setItem('gold coins', parseInt(localStorage.getItem('tech coins')) + 8500)
     localStorage.setItem('has season skin', 'yes')
     location.reload()
 }
@@ -70,7 +70,7 @@ if(localStorage.getItem('hasSquidGameMusic') === null){
 }
 
 if(localStorage.getItem('username') === 'Hardik' && localStorage.getItem('**') === 'adminCode(BREME)'){
-    localStorage.setItem('tech coins', 100000000000)
+    localStorage.setItem('gold coins', 100000000000)
     localStorage.setItem('diamonds',1000000000000)
 }
 

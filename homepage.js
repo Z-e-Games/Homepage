@@ -55,10 +55,10 @@ if(localStorage.getItem('XP') === null){
     localStorage.setItem('XP', 0)
 }
 
-if(localStorage.getItem('XP') >= 2000){
-    localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 2000)
+if(localStorage.getItem('XP') >= 5000){
+    localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 5000)
     localStorage.setItem('Level',parseInt(localStorage.getItem('Level')) + 1)
-    localStorage.setItem('gold coins', parseInt(localStorage.getItem('tech coins')) + 8500)
+    localStorage.setItem('gold coins', parseInt(localStorage.getItem('gold coins')) + 8500)
     localStorage.setItem('has season skin', 'yes')
     location.reload()
 }

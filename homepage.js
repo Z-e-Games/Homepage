@@ -28,7 +28,7 @@ if(localStorage.getItem('is signed in') === 'yes'){
     goldCoinsHtml.innerHTML = `Gold Coins: ${localStorage.getItem('gold coins')}`  
     diamondPlace.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
     usernamePlace.innerHTML = localStorage.getItem('username')
-    xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/20000`
+    xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/5000`
     levelPlace.innerHTML = `Level: ${localStorage.getItem('Level')}`
 }else{
     goldCoinsHtml.innerHTML = `Gold Coins: 0`
@@ -70,7 +70,7 @@ if(localStorage.getItem('hasSquidGameMusic') === null){
 }
 
 if(localStorage.getItem('username') === 'Hardik' && localStorage.getItem('**') === 'adminCode(BREME)'){
-    localStorage.setItem('gold coins', 100000000000)
-    localStorage.setItem('diamonds',1000000000000)
+    localStorage.setItem('gold coins', 100000000000000000000000000000)
+    localStorage.setItem('diamonds',10000000000000000000000000)
 }
 

@@ -4,6 +4,9 @@ const diamondPlace = document.getElementById('diamond')
 const skinPlace = document.getElementById('skin-show')
 const xpPlace = document.getElementById('xp-show')
 const levelPlace = document.getElementById('level-show')
+if(localStorage.getItem('coins per kill') === null){
+    localStorage.setItem('coins per kill', 1)
+}
 if(localStorage.getItem('pulse ammo') === null){
     localStorage.setItem('pulse ammo',100)
 }
@@ -15,6 +18,8 @@ if(localStorage.getItem('diamonds') === null){
 }
 if(localStorage.getItem('gold coins') === null){
     localStorage.setItem('gold coins', 100)
+}else if(localStorage.getItem('gold coins') > 50000){
+    localStorage.setItem('gold coins', 50000)
 }
 
 if(localStorage.getItem('has season skin') === null){
@@ -28,7 +33,7 @@ if(localStorage.getItem('is signed in') === 'yes'){
     goldCoinsHtml.innerHTML = `Gold Coins: ${localStorage.getItem('gold coins')}`  
     diamondPlace.innerHTML = `Diamonds: ${localStorage.getItem('diamonds')}`
     usernamePlace.innerHTML = localStorage.getItem('username')
-    xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/5000`
+    xpPlace.innerHTML = `XP: ${localStorage.getItem('XP')}/20000`
     levelPlace.innerHTML = `Level: ${localStorage.getItem('Level')}`
 }else{
     goldCoinsHtml.innerHTML = `Gold Coins: 0`
@@ -55,8 +60,8 @@ if(localStorage.getItem('XP') === null){
     localStorage.setItem('XP', 0)
 }
 
-if(localStorage.getItem('XP') >= 5000){
-    localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 5000)
+if(localStorage.getItem('XP') >= 2000){
+    localStorage.setItem('XP', parseInt(localStorage.getItem('XP')) - 2000)
     localStorage.setItem('Level',parseInt(localStorage.getItem('Level')) + 1)
     localStorage.setItem('gold coins', parseInt(localStorage.getItem('gold coins')) + 8500)
     localStorage.setItem('has season skin', 'yes')
@@ -70,7 +75,8 @@ if(localStorage.getItem('hasSquidGameMusic') === null){
 }
 
 if(localStorage.getItem('username') === 'Hardik' && localStorage.getItem('**') === 'adminCode(BREME)'){
-    localStorage.setItem('gold coins', 100000000000000000000000000000)
-    localStorage.setItem('diamonds',10000000000000000000000000)
+    localStorage.setItem('gold coins', 100000000000)
+    localStorage.setItem('diamonds',1000000000000)
 }
 
+console.warn('%c Close out of dev tools or account may be terminated.',"font-size: 36px;")
